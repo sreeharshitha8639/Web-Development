@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Web Development Portfolio</title>
+
+<style>
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fc;
+    color: #333;
+    text-align: center;
+}
+
+/* CONTAINER */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HEADER */
+
+header {
+    background: #0b1f3a;
+    color: white;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 80px 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 15px auto;
+    font-size: 18px;
+}
+
+/* SECTION */
+
+.section {
+    padding: 60px 20px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #0b1f3a;
+}
+
+.section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* GRID */
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+    width: 280px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.4s;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* LIST SECTIONS */
+
+.tools-section,
+.objectives-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* PROFESSIONAL LIST */
+
+.tools-list,
+.objectives-list {
+
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+
+}
+
+.tools-list li,
+.objectives-list li {
+
+    margin: 12px 0;
+    font-size: 18px;
+
+}
+
+/* CHECK ICON */
+
+.tools-list li::before,
+.objectives-list li::before {
+
+    content: "✓ ";
+    color: #007bff;
+    font-weight: bold;
+
+}
+
+/* BUTTON */
+
+button {
+
+    padding: 12px 25px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+button:hover {
+
+    background: #0056b3;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    background: #0b1f3a;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+
+}
+
+/* ANIMATION */
+
+.fade {
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+
+}
+
+.fade.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Web Development Portfolio</h1>
+
+<p>Professional Overview and Explanation</p>
+
+</header>
+
+
+<section class="hero fade">
+
+<h2>What is Web Development?</h2>
+
+<p>
+
+Web development is the process of designing, building, and maintaining websites and web applications.
+It includes frontend development, backend development, and database integration to create functional and scalable systems.
+
+</p>
+
+</section>
+
+
+<section class="section container fade">
+
+<h2>Applications of Web Development</h2>
+
+<div class="grid">
+
+<div class="card" onclick="showInfo('Business websites help companies establish online presence.')">
+
+<h3>Business Websites</h3>
+
+<p>Company presence</p>
+
+</div>
+
+
+<div class="card" onclick="showInfo('E-commerce platforms enable online product selling.')">
+
+<h3>E-commerce</h3>
+
+<p>Online selling systems</p>
+
+</div>
+
+
+<div class="card" onclick="showInfo('Web apps provide online services.')">
+
+<h3>Web Applications</h3>
+
+<p>Software platforms</p>
+
+</div>
+
+
+<div class="card" onclick="showInfo('Education websites deliver learning.')">
+
+<h3>Education Platforms</h3>
+
+<p>Online learning systems</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="tools-section fade">
+
+<h2>Tools Used in Web Development</h2>
+
+<ul class="tools-list">
+
+<li>HTML – Structure</li>
+
+<li>CSS – Styling</li>
+
+<li>JavaScript – Functionality</li>
+
+<li>React – Frontend framework</li>
+
+<li>Node.js – Backend system</li>
+
+<li>MySQL – Database</li>
+
+<li>VS Code – Development tool</li>
+
+<li>GitHub – Version control</li>
+
+</ul>
+
+</section>
+
+
+<section class="objectives-section fade">
+
+<h2>Objectives</h2>
+
+<ul class="objectives-list">
+
+<li>Create responsive websites</li>
+
+<li>Provide digital services</li>
+
+<li>Improve user experience</li>
+
+<li>Enable online business operations</li>
+
+<li>Ensure performance and security</li>
+
+</ul>
+
+<button onclick="showConclusion()">Show Conclusion</button>
+
+<p id="output"></p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Web Development Portfolio</p>
+
+</footer>
+
+
+<script>
+
+/* CARD INFO */
+
+function showInfo(text)
+{
+    alert(text);
+}
+
+/* CONCLUSION */
+
+function showConclusion()
+{
+    document.getElementById("output").innerHTML =
+    "Web development is essential for building scalable, secure, and high-performance digital platforms.";
+}
+
+/* SCROLL ANIMATION */
+
+const fades = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+
+    fades.forEach(element => {
+
+        const position = element.getBoundingClientRect().top;
+
+        if(position < window.innerHeight - 100)
+        {
+            element.classList.add("show");
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
